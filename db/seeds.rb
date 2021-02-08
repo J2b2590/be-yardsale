@@ -9,3 +9,6 @@
 
 
 user1 = User.create(name: "NAME")
+
+
+shirt = Item.create(name: "polo", price: "3.50", user: user1)

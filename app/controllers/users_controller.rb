@@ -5,8 +5,6 @@ class UsersController < ApplicationController
         render json: users
     end
 
-    def 
-
     def create
         user = User.find_or_create_by(user_params)
         render json: user

@@ -11,4 +11,11 @@
 user1 = User.create(name: "NAME")
 
 
-shirt = Item.create(name: "polo", price: "3.50", user: user1)
+# shirt = Item.create(name: "polo", price: "3.50", user: user1)
+
+50.times do
+
+    note_one = Item.create(name: Faker::Appliance.equipment, price: Faker::Number.decimal(l_digits: 2), user: user1)
+    
+end
+

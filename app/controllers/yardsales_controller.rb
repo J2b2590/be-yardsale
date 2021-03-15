@@ -1,0 +1,2 @@
+class YardsalesController < ApplicationController
+end

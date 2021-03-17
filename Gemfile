@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
-
+gem 'active_model_serializers'
 gem 'rack-cors', '~> 0.3.1'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

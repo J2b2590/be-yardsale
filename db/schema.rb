@@ -25,9 +25,11 @@ ActiveRecord::Schema.define(version: 2021_03_15_180643) do
     t.string "name"
     t.string "price"
     t.integer "user_id", null: false
+    t.integer "yardsale_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_items_on_user_id"
+    t.index ["yardsale_id"], name: "index_items_on_yardsale_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -40,16 +42,14 @@ ActiveRecord::Schema.define(version: 2021_03_15_180643) do
     t.string "streetAddress"
     t.integer "zipcode"
     t.integer "user_id", null: false
-    t.integer "item_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["item_id"], name: "index_yardsales_on_item_id"
     t.index ["user_id"], name: "index_yardsales_on_user_id"
   end
 
   add_foreign_key "favorites", "items"
   add_foreign_key "favorites", "users"
   add_foreign_key "items", "users"
-  add_foreign_key "yardsales", "items"
+  add_foreign_key "items", "yardsales"
   add_foreign_key "yardsales", "users"
 end

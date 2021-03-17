@@ -8,14 +8,22 @@
 
 
 
+
+
 user1 = User.create(name: "NAME")
 
+user2 = User.create(name: "another")
 
-# shirt = Item.create(name: "polo", price: "3.50", user: user1)
+yard1 = Yardsale.create(streetAddress: "street name", zipcode: 43243, user: user2)
 
-5.times do
+shirt = Item.create(name: "polo", price: "3.50", user: user2, yardsale: yard1)
 
-    note_one = Item.create(name: Faker::Appliance.equipment, price: Faker::Number.decimal(l_digits: 2), user: user1)
 
-end
+
+
+
+# 5.times do
+
+#     note_one = Item.create(name: Faker::Appliance.equipment, price: Faker::Number.decimal(l_digits: 2), user: user1)
+# end
 
